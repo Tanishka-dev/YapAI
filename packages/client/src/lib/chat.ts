@@ -93,8 +93,10 @@ type ChatApiResponse = {
   error?: string
 }
 
+const API_BASE = import.meta.env.VITE_API_URL?.replace(/\/$/, "") ?? ""
+
 export async function sendMessage(prompt: string, sessionId: string) {
-  const res = await fetch("/api/chat", {
+  const res = await fetch(`${API_BASE}/api/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt, sessionId }),
