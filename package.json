@@ -1,0 +1,22 @@
+{
+  "name": "yapai",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts "
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^10.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
